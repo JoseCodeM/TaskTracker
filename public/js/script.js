@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
 		
 		taskElement.appendChild(taskContent);
 
+		//create element input w/ a class of 'text'
 		let taskInput = document.createElement('input');
 		taskInput.classList.add('text');
 		taskInput.type = 'text';
