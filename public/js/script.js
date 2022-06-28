@@ -12,6 +12,11 @@ window.addEventListener('load', () => {
 
 		let task = input.value;
 
+		if (!task) {
+			alert("Please input a task")
+			return;
+		}
+
 		//creating a div element and adding a class of 'task' to it
 		let taskElement = document.createElement('div');
 		taskElement.classList.add('task');
