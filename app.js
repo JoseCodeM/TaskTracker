@@ -1,6 +1,7 @@
 const mysql = require('mysql2');
 const express = require('express');
 const bodyParser = require('body-parser');
+const axios = require("axios");
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -32,25 +33,19 @@ app.use('/js', express.static(__dirname + 'public/js'))
 app.set('views', './views')
 app.set('view engine', 'ejs')
 
+//
+// app.get('/tasks', (req, res) => {
+//     console.log(req);
+// })
+
 app.get('', (req,res) => {
     res.render('index')
 })
+
+//axios 
+
+
 //confirmation on port
 app.listen(port, () => {
     console.info(`listening on port ${port}`);
 })
-
-//Getting all list
-app.get('/',(req, res) => {
-    let sqlQuery = "SELECT * FROM TaskTracker.TrackerList;";
-    
-    let query = connection.query(sqlQuery, (err, results) => {
-      if(err) throw err;
-      res.send(apiResponse(results));
-    });
-  });
-
-  //API Response
-  function apiResponse(results){
-    return JSON.stringify({"status": 200, "error": null, "response": results});
-}
