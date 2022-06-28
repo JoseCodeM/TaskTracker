@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    margin-top: 5px;
+    background-image: linear-gradient(to right, red , yellow);
     color: white;
 }
 
@@ -19,4 +20,26 @@ header {
 
 h1 {
     font-size: 50px ;
+}
+
+input {
+    width: 40rem;
+    height: 30px;
+}
+
+main {
+    border: 2px solid black;
+    margin-top: 10px;
+}
+
+#new-task-submit {
+    border-radius: 5px;
+}
+
+.delete {
+    border-radius: 5px;
+}
+
+.edit {
+    border-radius: 5px;
 }
